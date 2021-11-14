@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV !== 'production') {
-   require('dotenv').config()
-}
+    require('dotenv').config()
+ }
 
 
 const express = require ("express");
@@ -40,7 +40,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.get('/', checkAuthenticated, (req, res) => {
-    res.sendFile(__dirname + '/public/main.html')
+    res.sendFile(__dirname + '/my-app/public/index.html')
 })
 
 app.get('/login', (req, res) => {
@@ -99,7 +99,7 @@ res.redirect('/login')
 
 // Acceso desde el back a las distintas direcciones
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname + '/public/main.html')
+    res.sendFile(__dirname + '/my-app/public/index.html')
    })
 
 
@@ -126,8 +126,8 @@ app.post('/contactUS', (req, res)=>{
        service:'hotmail',
         secure: false,
         auth: {
-           user: 'joacocra99@hotmail.com',
-           pass: 'TVtvgood094984893!'
+           user: 'yt',
+           pass: 'tr'
             
 
             
@@ -135,7 +135,7 @@ app.post('/contactUS', (req, res)=>{
     })
     const mailOptions = {
         from: req.body.email,
-        to: 'joacocra99@hotmail.com',
+        to: 'erg',
         subject: `message from ${req.body.email}: ${req.body.subject}`,
         text: req.body.message
     }
